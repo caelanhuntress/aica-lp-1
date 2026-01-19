@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AICA LP-1 - AI-Powered Solutions</title>
+    <title>AI Foundations Certification - 6-Session Upskilling Programme</title>
     <style>
         * {
             margin: 0;
@@ -13,56 +13,66 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: #f8f9fa;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
         }
 
         .hero {
-            padding: 60px 40px;
+            padding: 80px 40px;
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 3.2rem;
+            margin-bottom: 30px;
             font-weight: 700;
-            animation: fadeInDown 1s ease-out;
+            line-height: 1.2;
         }
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+        .hero .subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            font-weight: 500;
             opacity: 0.95;
-            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero .description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 30px;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 15px 40px;
+            padding: 18px 45px;
             font-size: 1.2rem;
             font-weight: 600;
-            color: #667eea;
+            color: #2c3e50;
             background: white;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            animation: fadeIn 1.5s ease-out;
+            margin: 10px;
         }
 
         .cta-button:hover {
@@ -70,91 +80,218 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
-        .features {
-            padding: 60px 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
         }
 
-        .feature {
-            padding: 30px;
-            text-align: center;
-            border-radius: 15px;
+        .cta-button.secondary:hover {
+            background: white;
+            color: #2c3e50;
+        }
+
+        .section {
+            padding: 60px 40px;
+        }
+
+        .section.gray {
             background: #f8f9fa;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            color: #3498db;
+            font-weight: 600;
+        }
+
+        .section p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .section ul {
+            margin: 20px 0 20px 30px;
+            font-size: 1.15rem;
+        }
+
+        .section li {
+            margin-bottom: 12px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .risk-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .risk-box p {
+            color: #856404;
+        }
+
+        .programme-box {
+            background: #e7f3ff;
+            border-left: 5px solid #3498db;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .outcome-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
             transition: all 0.3s ease;
         }
 
-        .feature:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .outcome-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
-        .feature-icon {
+        .outcome-card .metric {
             font-size: 3rem;
+            font-weight: 700;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .outcome-card .label {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .testimonial {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .pricing-box {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+
+        .pricing-box h3 {
+            color: white;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
-        .feature h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #667eea;
+        .pricing-box .price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 20px 0;
         }
 
-        .feature p {
-            color: #666;
-            line-height: 1.8;
+        .pricing-box .price-detail {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 80px 40px;
+            background: #2c3e50;
+            color: white;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 40px;
         }
 
         .footer {
             padding: 40px;
             text-align: center;
+            background: #1a252f;
+            color: #95a5a6;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 30px 0;
+        }
+
+        .column {
+            padding: 30px;
             background: #f8f9fa;
-            color: #666;
+            border-radius: 10px;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .column h3 {
+            margin-top: 0;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .highlight {
+            font-weight: 600;
+            color: #2c3e50;
         }
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
-            .hero p {
-                font-size: 1.2rem;
+            .hero .subtitle {
+                font-size: 1.3rem;
             }
 
-            .features {
+            .hero .description {
+                font-size: 1.1rem;
+            }
+
+            .section {
                 padding: 40px 20px;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-button {
+                display: block;
+                margin: 10px auto;
+                max-width: 300px;
             }
         }
     </style>
@@ -162,51 +299,179 @@
 <body>
     <div class="container">
         <div class="hero">
-            <h1>Get the Ai Foundations Certification</h1>
-            <p>Transform Your Business with AI-Powered Innovation</p>
-            <a href="#features" class="cta-button">Discover More</a>
+            <h1>Future-Proof Your Team with Practical AI Capability</h1>
+            <p class="subtitle">A 6-Session AI Upskilling Programme for Organisations That Can't Afford to Fall Behind</p>
+            <p class="description">AI is already reshaping how work gets done. The organisations pulling ahead aren't experimenting more — they're building <strong>shared capability, clear standards, and confident teams</strong>.</p>
+            <p class="description">This programme gives your people a common AI foundation, then lets you tailor advanced capability to the work that actually matters.</p>
+            <p class="tagline">Six focused workshops. Enterprise-ready outcomes. Designed for adoption, not hype.</p>
         </div>
 
-        <div class="features" id="features">
-            <div class="feature">
-                <div class="feature-icon">🚀</div>
-                <h3>Lightning Fast</h3>
-                <p>Experience blazing-fast performance that scales with your needs. Our optimized solutions deliver results in real-time.</p>
+        <div class="section">
+            <h2>The Risk You're Managing</h2>
+            <p>Most leadership teams are facing the same quiet problem:</p>
+            <ul>
+                <li>AI usage is inconsistent and uncoordinated</li>
+                <li>Capability varies wildly between individuals and teams</li>
+                <li>Tools are appearing faster than skills, standards, or governance</li>
+            </ul>
+
+            <div class="risk-box">
+                <p><strong>The risk isn't that your team won't use AI.</strong></p>
+                <p>The risk is that they'll use it <strong>poorly, unevenly, or without alignment</strong> — creating productivity drag, compliance exposure, and missed opportunity.</p>
+                <p style="margin-top: 20px; font-weight: 600;">This programme exists to prevent that.</p>
+            </div>
+        </div>
+
+        <div class="section gray">
+            <h2>The Programme: Structured Where It Matters. Flexible Where It Counts.</h2>
+            <p>This six-session programme combines <span class="highlight">shared foundations</span> with <span class="highlight">customisable depth</span>, ensuring organisation-wide alignment while allowing you to invest where impact is highest.</p>
+
+            <h3>Sessions 1–3: Foundations (100-Level)</h3>
+            <p>Every participant completes the same core workshops:</p>
+            <div class="programme-box">
+                <p><strong>101 – AI Foundations</strong> – Understand what AI is, how it works, and what it means for modern work.</p>
+                <p><strong>102 – Applied AI Ideation</strong> – Identify high-value, realistic AI use cases across roles and teams.</p>
+                <p><strong>103 – Prompting Essentials</strong> – Learn how to work effectively with AI systems day-to-day.</p>
+            </div>
+            <p>These sessions establish a shared language, baseline competence, and confidence across your organisation.</p>
+
+            <h3>Sessions 4–6: Electives (200-Level)</h3>
+            <p>After the foundations, your organisation selects <span class="highlight">three elective workshops</span> aligned to your priorities.</p>
+            <p>Electives span areas such as:</p>
+            <ul>
+                <li>Productivity, Automation, and Operational Efficiency</li>
+                <li>Knowledge Management and Organisational Intelligence</li>
+                <li>Communication, Marketing, and Sales Enablement</li>
+                <li>Strategic Thinking, Decision-Making, and Planning</li>
+                <li>Learning, Creativity, Multimedia, and AI Governance</li>
+            </ul>
+            <p>This ensures the programme is <span class="highlight">relevant, role-specific, and outcome-driven</span> — not generic AI training.</p>
+        </div>
+
+        <div class="section">
+            <h2>What Your Team Will Be Able to Do</h2>
+            <p>By the end of the programme, participants will:</p>
+            <ul>
+                <li>Use AI confidently and appropriately in daily work</li>
+                <li>Identify where AI adds value — and where it doesn't</li>
+                <li>Apply consistent prompting, workflows, and standards</li>
+                <li>Reduce ad-hoc experimentation and tool sprawl</li>
+                <li>Make faster, better-informed decisions with AI support</li>
+            </ul>
+            <div class="risk-box" style="background: #d1ecf1; border-left-color: #3498db;">
+                <p style="color: #0c5460;"><strong>This is not about turning your people into technologists.</strong></p>
+                <p style="color: #0c5460;">It's about building <strong>capable, confident, and future-ready knowledge workers</strong>.</p>
+            </div>
+        </div>
+
+        <div class="section gray">
+            <h2>Who This Programme Is For</h2>
+
+            <div class="two-column">
+                <div class="column" style="background: #d4edda; border-left: 5px solid #28a745;">
+                    <h3 style="color: #155724; margin-top: 0;">This programme is ideal if you are:</h3>
+                    <ul style="color: #155724;">
+                        <li>An L&D leader responsible for upskilling knowledge workers</li>
+                        <li>A senior leader accountable for productivity, risk, and capability</li>
+                        <li>A leadership team standardising AI adoption across functions</li>
+                        <li>An organisation moving from experimentation to execution</li>
+                    </ul>
+                </div>
+
+                <div class="column" style="background: #f8d7da; border-left: 5px solid #dc3545;">
+                    <h3 style="color: #721c24; margin-top: 0;">This programme is not a fit if you are:</h3>
+                    <ul style="color: #721c24;">
+                        <li>Looking for one-off AI demos or inspiration sessions</li>
+                        <li>Seeking deep technical or developer-level training</li>
+                        <li>Treating AI as an optional side project rather than a core capability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Proven Outcomes from Similar Organisations</h2>
+
+            <div class="testimonial">
+                "Exceeded every expectation — practical, engaging, and directly tied to our work."
             </div>
 
-            <div class="feature">
-                <div class="feature-icon">🎯</div>
-                <h3>Precision Focused</h3>
-                <p>Get accurate, data-driven insights tailored to your specific goals. Make informed decisions with confidence.</p>
+            <div class="testimonial">
+                "The shift in confidence and engagement across the team is exactly what we were hoping for."
             </div>
 
-            <div class="feature">
-                <div class="feature-icon">🔒</div>
-                <h3>Secure & Reliable</h3>
-                <p>Enterprise-grade security protocols ensure your data is protected. Trust in our robust infrastructure.</p>
+            <div class="testimonial">
+                "Practical, tailored, and highly actionable — every participant found it valuable."
             </div>
 
-            <div class="feature">
-                <div class="feature-icon">💡</div>
-                <h3>Innovative Solutions</h3>
-                <p>Stay ahead with cutting-edge technology. We continuously evolve to meet tomorrow's challenges today.</p>
+            <p style="margin-top: 40px;">Across comparable multi-session AI programmes, participants consistently report:</p>
+
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="metric">+45%</div>
+                    <div class="label">increase in confidence using AI tools</div>
+                </div>
+                <div class="outcome-card">
+                    <div class="metric">+55%</div>
+                    <div class="label">improvement in prompt quality and effectiveness</div>
+                </div>
+                <div class="outcome-card">
+                    <div class="metric">+65%</div>
+                    <div class="label">productivity uplift through smarter workflows</div>
+                </div>
+                <div class="outcome-card">
+                    <div class="metric">+75%</div>
+                    <div class="label">improvement in strategic decision-making confidence</div>
+                </div>
             </div>
 
-            <div class="feature">
-                <div class="feature-icon">🌐</div>
-                <h3>Global Reach</h3>
-                <p>Connect with audiences worldwide. Our platform supports multiple languages and regions seamlessly.</p>
-            </div>
+            <p style="font-size: 1.2rem; font-weight: 600; text-align: center; margin-top: 30px;">These are capability gains that compound over time — not short-term novelty effects.</p>
+        </div>
 
-            <div class="feature">
-                <div class="feature-icon">📊</div>
-                <h3>Analytics Dashboard</h3>
-                <p>Track your success with comprehensive analytics. Visualize metrics that matter to your business.</p>
+        <div class="section gray">
+            <h2>Delivery Format</h2>
+            <ul>
+                <li><strong>6 × 90-minute interactive workshops</strong></li>
+                <li>Delivered in-person or online</li>
+                <li>Hands-on and directly tied to participants' real work</li>
+                <li>Designed for adoption, not passive learning</li>
+            </ul>
+            <p style="margin-top: 30px; font-size: 1.2rem; font-weight: 600;">Each session produces immediate, usable outcomes.</p>
+        </div>
+
+        <div class="section">
+            <h2>Investment</h2>
+            <div class="pricing-box">
+                <h3>Clear, scalable pricing aligned to productivity, capability uplift, and risk reduction</h3>
+                <div class="price">$150</div>
+                <div class="price-detail">per person, per workshop</div>
+                <div style="margin: 30px 0; font-size: 1.8rem; font-weight: 600;">or</div>
+                <div class="price">$900</div>
+                <div class="price-detail">per participant for the full programme</div>
+            </div>
+        </div>
+
+        <div class="section gray">
+            <h2>Next Steps</h2>
+            <p>Before committing to electives or delivery, we start with a conversation.</p>
+            <p>Most discovery calls take <strong>20 minutes</strong> and focus on:</p>
+            <ul>
+                <li>Your team's current AI maturity</li>
+                <li>Capability gaps and risk areas</li>
+                <li>Which electives will deliver the highest return</li>
+            </ul>
+        </div>
+
+        <div class="cta-section">
+            <h2>Build AI capability deliberately — before being forced to react.</h2>
+            <div style="margin-top: 40px;">
+                <a href="#contact" class="cta-button">Schedule a Discovery Call</a>
+                <a href="#enquiry" class="cta-button secondary">Submit an Enquiry Form</a>
             </div>
         </div>
 
         <div class="footer">
-            <p>&copy; 2026 AICA LP-1. All rights reserved.</p>
+            <p>&copy; 2026 AI Foundations Programme. All rights reserved.</p>
         </div>
     </div>
 
@@ -240,11 +505,11 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.feature').forEach(feature => {
-            feature.style.opacity = '0';
-            feature.style.transform = 'translateY(20px)';
-            feature.style.transition = 'all 0.6s ease-out';
-            observer.observe(feature);
+        document.querySelectorAll('.outcome-card, .section').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.6s ease-out';
+            observer.observe(element);
         });
     </script>
 </body>
