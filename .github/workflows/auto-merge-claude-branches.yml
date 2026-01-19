@@ -3,7 +3,7 @@ name: Auto-merge Claude branches to main
 on:
   push:
     branches:
-      - 'claude/**'
+      - 'claude/join*'
 
 jobs:
   auto-merge:
