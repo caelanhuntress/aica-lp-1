@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Foundations Certification - 6-Session Upskilling Programme</title>
+    <title>AI Coaching Academy — Stop Dabbling with AI. Start Operating It.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -27,8 +27,44 @@
             background: white;
         }
 
+        /* ── Sticky CTA Bar ── */
+        .sticky-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #004AAD;
+            padding: 12px 20px;
+            text-align: center;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-bar.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-bar a {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #004AAD;
+            background: #FFD972;
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .sticky-bar a:hover {
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* ── SECTION 1: Hero ── */
         .hero {
-            padding: 80px 40px;
+            padding: 100px 40px 80px;
             text-align: center;
             background: linear-gradient(135deg, #14080E 0%, #004AAD 100%);
             color: white;
@@ -36,39 +72,50 @@
 
         .hero h1 {
             font-family: 'League Spartan', sans-serif;
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             margin-bottom: 30px;
             font-weight: 700;
-            line-height: 1.2;
+            line-height: 1.15;
         }
 
         .hero .subtitle {
-            font-size: 1.6rem;
-            margin-bottom: 25px;
-            font-weight: 500;
-            opacity: 0.95;
-        }
-
-        .hero .description {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            opacity: 0.9;
-            max-width: 900px;
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            opacity: 0.92;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.8;
         }
 
-        .hero .tagline {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-top: 30px;
+        .hero .cta-group {
+            margin-bottom: 25px;
         }
 
+        .hero .anchor-line {
+            font-size: 0.95rem;
+            opacity: 0.75;
+            margin-top: 10px;
+        }
+
+        .anchor-link {
+            color: #FFD972;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .anchor-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Buttons ── */
         .cta-button {
             display: inline-block;
             padding: 18px 45px;
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
             color: #004AAD;
             background: #FFD972;
             border: none;
@@ -82,6 +129,7 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background: #ffe8a0;
         }
 
         .cta-button.secondary {
@@ -93,14 +141,41 @@
         .cta-button.secondary:hover {
             background: #FFD972;
             color: #004AAD;
+            border-color: #FFD972;
         }
 
+        .cta-button.outline {
+            background: transparent;
+            color: #004AAD;
+            border: 2px solid #004AAD;
+        }
+
+        .cta-button.outline:hover {
+            background: #004AAD;
+            color: white;
+        }
+
+        /* ── Generic Section ── */
         .section {
-            padding: 60px 40px;
+            padding: 70px 40px;
         }
 
         .section.gray {
             background: #EFF2F1;
+        }
+
+        .section.dark {
+            background: #14080E;
+            color: white;
+        }
+
+        .section.dark h2 {
+            color: white;
+        }
+
+        .section.dark p,
+        .section.dark li {
+            color: #d0d0d0;
         }
 
         .section h2 {
@@ -109,144 +184,725 @@
             margin-bottom: 30px;
             color: #14080E;
             font-weight: 700;
+            text-align: center;
         }
 
         .section h3 {
             font-family: 'League Spartan', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            margin-top: 30px;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
             color: #004AAD;
             font-weight: 700;
         }
 
         .section p {
-            font-size: 1.15rem;
-            margin-bottom: 20px;
-            color: #555;
-            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            color: #444;
+            line-height: 1.85;
         }
 
         .section ul {
-            margin: 20px 0 20px 30px;
-            font-size: 1.15rem;
+            margin: 15px 0 15px 30px;
+            font-size: 1.1rem;
         }
 
         .section li {
-            margin-bottom: 12px;
-            color: #555;
+            margin-bottom: 10px;
+            color: #444;
             line-height: 1.7;
         }
 
-        .risk-box {
-            background: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 30px;
-            margin: 30px 0;
-            border-radius: 5px;
+        .text-center {
+            text-align: center;
         }
 
-        .risk-box p {
-            color: #856404;
-        }
-
-        .programme-box {
+        /* ── Callout box ── */
+        .callout {
             background: #e6f0ff;
             border-left: 5px solid #004AAD;
-            padding: 30px;
+            padding: 25px 30px;
             margin: 30px 0;
             border-radius: 5px;
         }
 
-        .outcomes-grid {
+        .callout p {
+            color: #14080E;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+
+        .callout-emphasis {
+            background: #EFF2F1;
+            border-left: 5px solid #058C42;
+            padding: 25px 30px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .callout-emphasis p {
+            color: #14080E;
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        /* ── SECTION 3: Steps ── */
+        .steps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin: 40px 0;
         }
 
-        .outcome-card {
+        .step-card {
             background: white;
-            padding: 30px;
+            padding: 35px 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             text-align: center;
             transition: all 0.3s ease;
         }
 
-        .outcome-card:hover {
+        .step-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
         }
 
-        .outcome-card .metric {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #004AAD;
-            margin-bottom: 10px;
-        }
-
-        .outcome-card .label {
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .testimonial {
-            background: #EFF2F1;
-            padding: 30px;
-            margin: 20px 0;
-            border-left: 5px solid #004AAD;
-            font-style: italic;
-            font-size: 1.2rem;
-            color: #14080E;
-        }
-
-        .pricing-box {
-            background: linear-gradient(135deg, #14080E 0%, #004AAD 100%);
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background: #004AAD;
             color: white;
-            padding: 50px;
-            text-align: center;
-            margin: 40px 0;
-            border-radius: 10px;
-        }
-
-        .pricing-box h3 {
             font-family: 'League Spartan', sans-serif;
-            color: white;
-            font-size: 2rem;
+            font-size: 1.5rem;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
-        .pricing-box .price {
-            font-size: 3.5rem;
+        .step-card h3 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .step-card p {
+            text-align: center;
+        }
+
+        .micro-line {
+            font-size: 1.05rem;
             font-weight: 700;
-            margin: 20px 0;
+            color: #004AAD;
+            text-align: center;
+            margin-top: 30px;
         }
 
-        .pricing-box .price-detail {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        /* ── SECTION 4: Feature cards ── */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+        }
+
+        .feature-card .payoff {
+            font-style: italic;
+            color: #058C42;
+            font-size: 1rem;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        /* ── SECTION 5: Weekly timeline ── */
+        .timeline {
+            max-width: 700px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 60px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #004AAD;
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
             margin-bottom: 30px;
+            position: relative;
         }
 
+        .timeline-day {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #004AAD;
+            min-width: 120px;
+            padding-right: 30px;
+            text-align: right;
+            padding-top: 12px;
+        }
+
+        .timeline-dot {
+            width: 14px;
+            height: 14px;
+            background: #004AAD;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 16px;
+            position: relative;
+            z-index: 1;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #004AAD;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-left: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            flex: 1;
+        }
+
+        .timeline-content p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .timeline-item.anytime .timeline-day {
+            color: #058C42;
+        }
+
+        .timeline-item.anytime .timeline-dot {
+            background: #058C42;
+            box-shadow: 0 0 0 2px #058C42;
+        }
+
+        .timeline-item.anytime .timeline-content {
+            background: #e8f5ee;
+            border-left: 3px solid #058C42;
+        }
+
+        /* ── SECTION 6: Pricing tiers ── */
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin: 40px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+
+        .tier {
+            background: white;
+            padding: 40px 30px;
+            text-align: center;
+            border-right: 1px solid #e8e8e8;
+            position: relative;
+        }
+
+        .tier:last-child {
+            border-right: none;
+        }
+
+        .tier.popular {
+            background: #004AAD;
+            color: white;
+            transform: scaleY(1.02);
+            z-index: 2;
+            box-shadow: 0 10px 40px rgba(0,74,173,0.3);
+        }
+
+        .tier-badge {
+            display: inline-block;
+            background: #FFD972;
+            color: #14080E;
+            font-family: 'League Spartan', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tier-illustration {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            background: #EFF2F1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .tier.popular .tier-illustration {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .tier-illustration-img {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .tier h3 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .tier.popular h3 {
+            color: white;
+        }
+
+        .tier-best-for {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .tier.popular .tier-best-for {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .tier-price {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #004AAD;
+            margin-bottom: 5px;
+        }
+
+        .tier.popular .tier-price {
+            color: #FFD972;
+        }
+
+        .tier-price-period {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .tier.popular .tier-price-period {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .tier-annual {
+            font-size: 0.85rem;
+            color: #058C42;
+            margin-bottom: 25px;
+        }
+
+        .tier.popular .tier-annual {
+            color: #FFD972;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            font-size: 0.92rem;
+        }
+
+        .tier-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: #444;
+        }
+
+        .tier.popular .tier-features li {
+            border-bottom-color: rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.9);
+        }
+
+        .tier-features li:last-child {
+            border-bottom: none;
+        }
+
+        .check {
+            color: #058C42;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .tier.popular .check {
+            color: #FFD972;
+        }
+
+        .dash {
+            color: #ccc;
+            flex-shrink: 0;
+        }
+
+        .tier.popular .dash {
+            color: rgba(255,255,255,0.3);
+        }
+
+        .tier .cta-button {
+            margin-top: 25px;
+            display: block;
+            padding: 15px 30px;
+            font-size: 1rem;
+        }
+
+        .tier.popular .cta-button {
+            background: #FFD972;
+            color: #004AAD;
+        }
+
+        .tier-footnote {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .tier-standalone {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .tier-standalone a {
+            color: #004AAD;
+            text-decoration: underline;
+        }
+
+        /* ── SECTION 7: What You're Missing ── */
+        .missing-list {
+            list-style: none;
+            margin: 30px 0;
+            padding: 0;
+        }
+
+        .missing-list li {
+            color: #d0d0d0;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .missing-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #FFD972;
+            font-weight: 700;
+        }
+
+        .pull-quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #FFD972;
+            margin: 35px 0;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        /* ── SECTION 8: Two columns ── */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 30px 0;
+        }
+
+        .column {
+            padding: 35px;
+            border-radius: 10px;
+        }
+
+        .column h3 {
+            margin-top: 0;
+        }
+
+        .column.positive {
+            background: #e8f5ee;
+            border-left: 5px solid #058C42;
+        }
+
+        .column.positive h3 {
+            color: #058C42;
+        }
+
+        .column.negative {
+            background: #fde8e5;
+            border-left: 5px solid #F2542D;
+        }
+
+        .column.negative h3 {
+            color: #F2542D;
+        }
+
+        /* ── SECTION 9: Meet Your Guide ── */
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .guide-photo {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .guide-photo-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: #EFF2F1;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1rem;
+        }
+
+        .guide-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #004AAD;
+            border-left: 4px solid #004AAD;
+            padding-left: 20px;
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .guide-link {
+            color: #004AAD;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .guide-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ── SECTION 10: Testimonials ── */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .testimonial-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            object-fit: cover;
+        }
+
+        .testimonial-photo-placeholder {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #EFF2F1;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .testimonial-card blockquote {
+            font-style: italic;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card .attribution {
+            font-weight: 700;
+            color: #14080E;
+            font-size: 0.95rem;
+        }
+
+        /* ── SECTION 11: FAQ ── */
+        .faq-list {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            cursor: pointer;
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #14080E;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        .faq-question:hover {
+            color: #004AAD;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #004AAD;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding-bottom: 20px;
+        }
+
+        .faq-answer p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* ── SECTION 12: Final CTA ── */
         .cta-section {
             text-align: center;
             padding: 80px 40px;
-            background: #14080E;
+            background: linear-gradient(135deg, #14080E 0%, #004AAD 100%);
             color: white;
         }
 
         .cta-section h2 {
             font-family: 'League Spartan', sans-serif;
             color: white;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
 
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 18px;
+            line-height: 1.8;
+        }
+
+        .secondary-links {
+            margin-top: 20px;
+        }
+
+        .secondary-links a {
+            color: #FFD972;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 15px;
+            font-size: 1.05rem;
+        }
+
+        .secondary-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Footer ── */
         .footer {
             padding: 40px;
             text-align: center;
             background: #14080E;
             color: #95a5a6;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: #b8c5d0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: white;
         }
 
         .footer-llm-section {
@@ -284,236 +940,503 @@
             color: white;
         }
 
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin: 30px 0;
-        }
-
-        .column {
-            padding: 30px;
-            background: #EFF2F1;
-            border-radius: 10px;
-        }
-
-        .column h3 {
-            margin-top: 0;
-        }
-
-        .highlight {
-            font-weight: 600;
-            color: #14080E;
-        }
-
+        /* ── Responsive ── */
         @media (max-width: 768px) {
+            .hero {
+                padding: 70px 20px 50px;
+            }
+
             .hero h1 {
                 font-size: 2.2rem;
             }
 
             .hero .subtitle {
-                font-size: 1.3rem;
-            }
-
-            .hero .description {
                 font-size: 1.1rem;
             }
 
             .section {
-                padding: 40px 20px;
+                padding: 50px 20px;
             }
 
             .section h2 {
                 font-size: 2rem;
             }
 
+            .steps-grid,
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tiers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tier.popular {
+                transform: none;
+            }
+
             .two-column {
                 grid-template-columns: 1fr;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-day {
+                min-width: 80px;
+                font-size: 0.85rem;
+                text-align: left;
+                padding-right: 15px;
             }
 
             .cta-button {
                 display: block;
                 margin: 10px auto;
-                max-width: 300px;
+                max-width: 320px;
+                text-align: center;
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                gap: 15px;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-bar" id="stickyBar">
+        <a href="https://ai-coaching.academy/plans/1947319/buy?plan_id=2230051" target="_blank" rel="noopener noreferrer">Start Your 14-Day Free Trial</a>
+    </div>
+
     <div class="container">
-        <div class="hero">
-            <h1>Future-Proof Your Team with Practical AI Capability</h1>
-            <p class="subtitle">A 6-Session AI Upskilling Programme for Organisations That Can't Afford to Fall Behind</p>
-            <p class="description">AI is already reshaping how work gets done. The organisations pulling ahead aren't experimenting more — they're building <strong>shared capability, clear standards, and confident teams</strong>.</p>
-            <p class="description">This programme gives your people a common AI foundation, then lets you tailor advanced capability to the work that actually matters.</p>
-            <p class="tagline">Six focused workshops. Enterprise-ready outcomes. Designed for adoption, not hype.</p>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 1: HERO                            -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="hero" id="hero">
+            <h1>Stop Dabbling with AI.<br>Start Operating It.</h1>
+            <p class="subtitle">The AI Coaching Academy is where ambitious professionals build real AI capability — through structured practice, live coaching, and a community of peers who take thinking seriously.</p>
+            <div class="cta-group">
+                <a href="https://ai-coaching.academy/plans/1947319/buy?plan_id=2230051" class="cta-button" target="_blank" rel="noopener noreferrer">Start Your 14-Day Free Trial</a>
+                <br>
+                <a href="#tiers" class="anchor-link">See Membership Plans ↓</a>
+            </div>
+            <p class="anchor-line">Starting from $100 NZD/month · Cancel anytime · Led by Caelan Huntress</p>
         </div>
 
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 2: THE PROBLEM                     -->
+        <!-- ═══════════════════════════════════════════ -->
         <div class="section">
-            <h2>The Risk You're Managing</h2>
-            <p>Most leadership teams are facing the same quiet problem:</p>
-            <ul>
-                <li>AI usage is inconsistent and uncoordinated</li>
-                <li>Capability varies wildly between individuals and teams</li>
-                <li>Tools are appearing faster than skills, standards, or governance</li>
-            </ul>
+            <h2>AI Is Moving Fast. Are You?</h2>
+            <p>You've tried the tools. You've watched the webinars. You've experimented when you have a spare moment.</p>
+            <p>But nothing sticks. You use AI the same way you did six months ago — sporadic, surface-level, unsure if you're even doing it right. Meanwhile, colleagues and competitors are pulling ahead.</p>
+            <p>The gap between someone who dabbles and someone who operates with confidence is growing every week. And you can feel it.</p>
 
-            <div class="risk-box">
-                <p><strong>The risk isn't that your team won't use AI.</strong></p>
-                <p>The risk is that they'll use it <strong>poorly, unevenly, or without alignment</strong> — creating productivity drag, compliance exposure, and missed opportunity.</p>
-                <p style="margin-top: 20px; font-weight: 600;">This programme exists to prevent that.</p>
+            <div class="callout">
+                <p>The problem isn't access to AI. It's that you're trying to figure it out alone.</p>
             </div>
+
+            <p>No structure. No feedback. No one to practice with.</p>
+
+            <div class="callout-emphasis">
+                <p>No professional should have to navigate the biggest shift in how work gets done without a community and a guide.</p>
+            </div>
+
+            <p>That's what the Academy changes.</p>
         </div>
 
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 3: HOW IT WORKS                    -->
+        <!-- ═══════════════════════════════════════════ -->
         <div class="section gray">
-            <h2>The Programme: Structured Where It Matters. Flexible Where It Counts.</h2>
-            <p>This six-session programme combines <span class="highlight">shared foundations</span> with <span class="highlight">customisable depth</span>, ensuring organisation-wide alignment while allowing you to invest where impact is highest.</p>
-
-            <h3>Sessions 1–3: Foundations (100-Level)</h3>
-            <p>Every participant completes the same core workshops:</p>
-            <div class="programme-box">
-                <p><strong>101 – AI Foundations</strong> – Understand what AI is, how it works, and what it means for modern work.</p>
-                <p><strong>102 – Applied AI Ideation</strong> – Identify high-value, realistic AI use cases across roles and teams.</p>
-                <p><strong>103 – Prompting Essentials</strong> – Learn how to work effectively with AI systems day-to-day.</p>
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Join the community.</h3>
+                    <p>Choose your membership level and get instant access to the Academy — live events, AI Games, resources, and a network of peers who are just as serious as you are.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Practice with structure.</h3>
+                    <p>Every week, you'll engage with live coaching sessions, hands-on AI Games, and real-world exercises designed to build capability — not just awareness. Share your work. Get feedback. Try new tools.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Become a confident AI operator.</h3>
+                    <p>Within weeks, you'll move from experimenting to executing — using AI fluently in your daily work, thinking more clearly, and operating with the confidence that comes from deliberate practice.</p>
+                </div>
             </div>
-            <p>These sessions establish a shared language, baseline competence, and confidence across your organisation.</p>
-
-            <h3>Sessions 4–6: Electives (200-Level)</h3>
-            <p>After the foundations, your organisation selects <span class="highlight">three elective workshops</span> aligned to your priorities.</p>
-            <p>Electives span areas such as:</p>
-            <ul>
-                <li>Productivity, Automation, and Operational Efficiency</li>
-                <li>Knowledge Management and Organisational Intelligence</li>
-                <li>Communication, Marketing, and Sales Enablement</li>
-                <li>Strategic Thinking, Decision-Making, and Planning</li>
-                <li>Learning, Creativity, Multimedia, and AI Governance</li>
-            </ul>
-            <p>This ensures the programme is <span class="highlight">relevant, role-specific, and outcome-driven</span> — not generic AI training.</p>
+            <p class="micro-line">Start your free trial and complete your first AI Game this week.</p>
+            <div class="text-center" style="margin-top: 25px;">
+                <a href="https://ai-coaching.academy/plans/1947319/buy?plan_id=2230051" class="cta-button" target="_blank" rel="noopener noreferrer">Start Your 14-Day Free Trial →</a>
+            </div>
         </div>
 
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 4: WHAT'S INSIDE                   -->
+        <!-- ═══════════════════════════════════════════ -->
         <div class="section">
-            <h2>What Your Team Will Be Able to Do</h2>
-            <p>By the end of the programme, participants will:</p>
-            <ul>
-                <li>Use AI confidently and appropriately in daily work</li>
-                <li>Identify where AI adds value — and where it doesn't</li>
-                <li>Apply consistent prompting, workflows, and standards</li>
-                <li>Reduce ad-hoc experimentation and tool sprawl</li>
-                <li>Make faster, better-informed decisions with AI support</li>
-            </ul>
-            <div class="risk-box" style="background: #d1ecf1; border-left-color: #004AAD;">
-                <p style="color: #0c5460;"><strong>This is not about turning your people into technologists.</strong></p>
-                <p style="color: #0c5460;">It's about building <strong>capable, confident, and future-ready knowledge workers</strong>.</p>
+            <h2>Everything Inside the Academy</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>AI Games</h3>
+                    <p>Structured, hands-on exercises where you use AI tools on real tasks. Every session, you leave with something you've actually made.</p>
+                    <p class="payoff">So you stop wondering "am I doing this right?" and start knowing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>AI Foundations Certification</h3>
+                    <p>Three 90-minute workshops (101, 102, 103) that build your core AI literacy and award a digital credential.</p>
+                    <p class="payoff">So you have proof of what you know — not just a feeling.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Live Events</h3>
+                    <p>Weekly Coaching Power Hours, monthly AiAmAs, Tutorial Tuesdays, and guest masterclasses. Miss one? Every session is recorded.</p>
+                    <p class="payoff">So you always have a reason to show up — and never fall behind.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>30 AI Games in 30 Days</h3>
+                    <p>A daily challenge: one game per day, each unlocking 23 hours after you complete the last.</p>
+                    <p class="payoff">So practice becomes a habit, not a chore.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Community Spaces</h3>
+                    <p>Show &amp; Tell for sharing your work. AI Playground for experimentation. Tools to Try for curated recommendations. A members directory to connect with peers.</p>
+                    <p class="payoff">So you're never learning alone again.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Full Mobile Access</h3>
+                    <p>The Academy runs on Mighty Networks — available as a fully-featured app so you can learn anywhere.</p>
+                    <p class="payoff">So your development fits your life, not the other way around.</p>
+                </div>
             </div>
         </div>
 
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 5: A WEEK IN THE ACADEMY           -->
+        <!-- ═══════════════════════════════════════════ -->
         <div class="section gray">
-            <h2>Who This Programme Is For</h2>
+            <h2>What a Typical Week Looks Like</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-day">Monday</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p>Browse the weekly AI Game challenge and start working through it at your own pace.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Tuesday</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p>Drop into Tutorial Tuesday — a focused session on a specific tool or technique.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Wednesday</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p>Share what you've been making in Show &amp; Tell. See what other members are building.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Thursday</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p>Join the Ai Coaching Power Hour — a live weekly session to think better with AI, together.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Friday</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p>Explore something new in Tools to Try or catch up on a Video Library replay you missed.</p>
+                    </div>
+                </div>
+                <div class="timeline-item anytime">
+                    <div class="timeline-day">Anytime</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p>Chat with other members, experiment in the AI Playground, or ask a question in the community feed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 6: MEMBERSHIP TIERS                -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="section" id="tiers">
+            <h2>Choose Your Level</h2>
+            <div class="tiers-grid">
+
+                <!-- Explorer -->
+                <div class="tier">
+                    <div class="tier-badge">14-Day Free Trial</div>
+                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/mn/aica-mn-plan-1-explorer.png" alt="Explorer" class="tier-illustration-img">
+                    <h3>Explorer</h3>
+                    <p class="tier-best-for">Professionals ready to grow their AI skills</p>
+                    <div class="tier-price">$100</div>
+                    <p class="tier-price-period">NZD/month</p>
+                    <p class="tier-annual">$1,000/year (save 17%)</p>
+                    <ul class="tier-features">
+                        <li><span class="check">✓</span> 2 monthly live events with AI experts</li>
+                        <li><span class="check">✓</span> Fortnightly tool sprints</li>
+                        <li><span class="check">✓</span> AiAmA + Coaching Power Hour: 1 per month</li>
+                        <li><span class="check">✓</span> AI Foundations Certification</li>
+                        <li><span class="dash">—</span> Monthly masterclasses</li>
+                        <li><span class="dash">—</span> Full Video Library</li>
+                        <li><span class="dash">—</span> All courses &amp; certifications</li>
+                        <li><span class="dash">—</span> Inner Circle community</li>
+                        <li><span class="dash">—</span> 1-on-1 mentoring with Caelan</li>
+                        <li><span class="dash">—</span> Direct project feedback</li>
+                        <li><span class="check">✓</span> <strong>Free trial: 14 days</strong></li>
+                    </ul>
+                    <a href="https://ai-coaching.academy/plans/1947319/buy?plan_id=2230051" class="cta-button" target="_blank" rel="noopener noreferrer">Start Your 14-Day Free Trial →</a>
+                </div>
+
+                <!-- Builder -->
+                <div class="tier popular">
+                    <div class="tier-badge">⭐ Most Popular</div>
+                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/mn/aica-mn-plan-2-builder.png" alt="Builder" class="tier-illustration-img">
+                    <h3>Builder</h3>
+                    <p class="tier-best-for">Intermediate-to-advanced users ready to go deeper</p>
+                    <div class="tier-price">$250</div>
+                    <p class="tier-price-period">NZD/month</p>
+                    <p class="tier-annual">$2,500/year (save 17%)</p>
+                    <ul class="tier-features">
+                        <li><span class="check">✓</span> 2 monthly live events with AI experts</li>
+                        <li><span class="check">✓</span> 2 weekly live events with Caelan</li>
+                        <li><span class="check">✓</span> Fortnightly tool sprints</li>
+                        <li><span class="check">✓</span> AiAmA + Coaching Power Hour: Included</li>
+                        <li><span class="check">✓</span> AI Foundations Certification</li>
+                        <li><span class="check">✓</span> Monthly masterclasses: 2 per month</li>
+                        <li><span class="check">✓</span> Full Video Library</li>
+                        <li><span class="check">✓</span> All courses &amp; certifications</li>
+                        <li><span class="dash">—</span> Inner Circle community</li>
+                        <li><span class="dash">—</span> 1-on-1 mentoring with Caelan</li>
+                        <li><span class="dash">—</span> Direct project feedback</li>
+                    </ul>
+                    <a href="https://ai-coaching.academy/plans/1947320/buy?plan_id=2230054" class="cta-button" target="_blank" rel="noopener noreferrer">Subscribe →</a>
+                </div>
+
+                <!-- Champion -->
+                <div class="tier">
+                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/mn/aica-mn-plan-3-champion.png" alt="Champion" class="tier-illustration-img">
+                    <h3>Champion</h3>
+                    <p class="tier-best-for">Internal AI advocates leading adoption in their organisation</p>
+                    <div class="tier-price">$1,000</div>
+                    <p class="tier-price-period">NZD/month</p>
+                    <p class="tier-annual">Contact Caelan for annual pricing</p>
+                    <ul class="tier-features">
+                        <li><span class="check">✓</span> All events</li>
+                        <li><span class="check">✓</span> Fortnightly tool sprints</li>
+                        <li><span class="check">✓</span> AiAmA + Coaching Power Hour: Included</li>
+                        <li><span class="check">✓</span> AI Foundations Certification</li>
+                        <li><span class="check">✓</span> Monthly masterclasses: Included</li>
+                        <li><span class="check">✓</span> Full Video Library</li>
+                        <li><span class="check">✓</span> All courses &amp; certifications</li>
+                        <li><span class="check">✓</span> Inner Circle community (max 10 members)</li>
+                        <li><span class="check">✓</span> 1-on-1 mentoring: Monthly 60-min session</li>
+                        <li><span class="check">✓</span> Direct project feedback</li>
+                    </ul>
+                    <a href="https://ai-coaching.academy/plans/1947321/buy?plan_id=2230057" class="cta-button" target="_blank" rel="noopener noreferrer">Subscribe →</a>
+                </div>
+            </div>
+
+            <p class="tier-footnote">Cancel anytime. No lock-in contracts.</p>
+            <p class="tier-standalone">Want just the AI Foundations Certification without a membership? Available as a standalone purchase for $500 NZD. <a href="https://ai-coaching.academy/spaces/22359390" target="_blank" rel="noopener noreferrer">Learn more →</a></p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 7: WHAT YOU'RE MISSING             -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="section dark">
+            <h2>This Is Happening Inside the Academy</h2>
+            <ul class="missing-list">
+                <li>Members are sharing AI-generated projects in Show &amp; Tell</li>
+                <li>New AI Games are dropping every week</li>
+                <li>The next Coaching Power Hour is coming up</li>
+                <li>Fresh tools just landed in Tools to Try</li>
+            </ul>
+            <p class="pull-quote">Every week you're not inside, you're falling further behind the people who are.</p>
+            <div class="text-center">
+                <a href="https://ai-coaching.academy/plans/1947319/buy?plan_id=2230051" class="cta-button" target="_blank" rel="noopener noreferrer">Start Your 14-Day Free Trial →</a>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 8: WHO THIS IS FOR                 -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="section gray">
+            <h2>Is This For You?</h2>
             <div class="two-column">
-                <div class="column" style="background: #e8f5ee; border-left: 5px solid #058C42;">
-                    <h3 style="color: #058C42; margin-top: 0;">This programme is ideal if you are:</h3>
-                    <ul style="color: #058C42;">
-                        <li>An L&D leader responsible for upskilling knowledge workers</li>
-                        <li>A senior leader accountable for productivity, risk, and capability</li>
-                        <li>A leadership team standardising AI adoption across functions</li>
-                        <li>An organisation moving from experimentation to execution</li>
+                <div class="column positive">
+                    <h3>This is for you if:</h3>
+                    <ul>
+                        <li>You want to use AI confidently and consistently in your daily work</li>
+                        <li>You learn best by doing — not watching</li>
+                        <li>You want structured practice alongside peers who challenge you</li>
+                        <li>You're ready to move from experimenting to operating</li>
                     </ul>
                 </div>
-
-                <div class="column" style="background: #fde8e5; border-left: 5px solid #F2542D;">
-                    <h3 style="color: #F2542D; margin-top: 0;">This programme is not a fit if you are:</h3>
-                    <ul style="color: #F2542D;">
-                        <li>Looking for one-off AI demos or inspiration sessions</li>
-                        <li>Seeking deep technical or developer-level training</li>
-                        <li>Treating AI as an optional side project rather than a core capability</li>
+                <div class="column negative">
+                    <h3>This is not for you if:</h3>
+                    <ul>
+                        <li>You're looking for one-off AI demos or inspiration sessions</li>
+                        <li>You want deep technical or developer-level training</li>
+                        <li>You treat AI as a side interest rather than a core professional skill</li>
                     </ul>
                 </div>
             </div>
         </div>
 
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 9: MEET YOUR GUIDE                 -->
+        <!-- ═══════════════════════════════════════════ -->
         <div class="section">
-            <h2>Proven Outcomes from Similar Organisations</h2>
-
-            <div class="testimonial">
-                "Exceeded every expectation — practical, engaging, and directly tied to our work."
-            </div>
-
-            <div class="testimonial">
-                "The shift in confidence and engagement across the team is exactly what we were hoping for."
-            </div>
-
-            <div class="testimonial">
-                "Practical, tailored, and highly actionable — every participant found it valuable."
-            </div>
-
-            <p style="margin-top: 40px;">Across comparable multi-session AI programmes, participants consistently report:</p>
-
-            <div class="outcomes-grid">
-                <div class="outcome-card">
-                    <div class="metric">+45%</div>
-                    <div class="label">increase in confidence using AI tools</div>
+            <h2>Meet Caelan Huntress</h2>
+            <div class="guide-layout">
+                <div>
+                    <p>Caelan Huntress is an AI Trainer based in Christchurch, New Zealand. He's trained hundreds of professionals across multiple organisations and designed the AI Foundations Certification from the ground up.</p>
+                    <p>His approach is built on a simple belief: you learn AI by using it, not by watching someone else use it. That's why every workshop in the Academy is built around AI Games — practical, structured exercises that build real capability through deliberate practice.</p>
+                    <p>Inside the Academy, Caelan runs weekly AI Coaching Power Hours, monthly AiAmA sessions, and personally mentors Champion members on their projects.</p>
+                    <div class="guide-quote">
+                        "I've watched too many smart people stay on the sidelines because nobody gave them a structured way to practice, or a place to play. That's what this Academy is."
+                    </div>
+                    <p><a href="https://caelanhuntress.com" class="guide-link" target="_blank" rel="noopener noreferrer">Learn more about Caelan →</a></p>
                 </div>
-                <div class="outcome-card">
-                    <div class="metric">+55%</div>
-                    <div class="label">improvement in prompt quality and effectiveness</div>
-                </div>
-                <div class="outcome-card">
-                    <div class="metric">+65%</div>
-                    <div class="label">productivity uplift through smarter workflows</div>
-                </div>
-                <div class="outcome-card">
-                    <div class="metric">+75%</div>
-                    <div class="label">improvement in strategic decision-making confidence</div>
+                <div>
+                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/caelan/stage-1.jpg" alt="Caelan Huntress speaking" class="guide-photo">
                 </div>
             </div>
-
-            <p style="font-size: 1.2rem; font-weight: 600; text-align: center; margin-top: 30px;">These are capability gains that compound over time — not short-term novelty effects.</p>
         </div>
 
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 10: SOCIAL PROOF                   -->
+        <!-- ═══════════════════════════════════════════ -->
         <div class="section gray">
-            <h2>Delivery Format</h2>
-            <ul>
-                <li><strong>6 × 90-minute interactive workshops</strong></li>
-                <li>Delivered in-person or online</li>
-                <li>Hands-on and directly tied to participants' real work</li>
-                <li>Designed for adoption, not passive learning</li>
-            </ul>
-            <p style="margin-top: 30px; font-size: 1.2rem; font-weight: 600;">Each session produces immediate, usable outcomes.</p>
+            <h2>What Members Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="https://caelanhuntress.com/wp-content/uploads/2026/01/mark-guyton-headshot-cir-150x150.png" alt="Mark Guyton" class="testimonial-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div class="testimonial-photo-placeholder" style="display:none;">👤</div>
+                    <blockquote>"This AI training was an absolutely mind-blowing experience! I learnt so much — far more than I expected — and the sessions were practical and fun. Caelan was highly knowledgeable and incredibly engaging, which made the learning even more enjoyable. The training really opened my eyes to the potential of AI in my work and beyond. Highly recommend to anyone looking to upskill in this space!"</blockquote>
+                    <div class="attribution">— Mark Guyton</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://caelanhuntress.com/wp-content/uploads/2026/01/kelly-anne-findlay-150x150.png" alt="Kelly-Anne Findlay" class="testimonial-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div class="testimonial-photo-placeholder" style="display:none;">👤</div>
+                    <blockquote>"Learnt so much about how much AI has advanced in the last 12 months. Also how to use it more efficiently for some tasks. Great presenters, and fantastic that it was interactive by using it in the course. Easy to go back and see what we learnt to reference it and show other staff members."</blockquote>
+                    <div class="attribution">— Kelly-Anne Findlay</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://caelanhuntress.com/wp-content/uploads/2026/01/matt-harris-headshot-cir-150x150.png" alt="Matt Harris" class="testimonial-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div class="testimonial-photo-placeholder" style="display:none;">👤</div>
+                    <blockquote>"This was probably the best workshop that I have attended, and multiple people said the same thing. The shift in confidence and engagement across the team is exactly what we were hoping for."</blockquote>
+                    <div class="attribution">— Matt Harris</div>
+                </div>
+            </div>
         </div>
 
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 11: FAQ                            -->
+        <!-- ═══════════════════════════════════════════ -->
         <div class="section">
-            <h2>Investment</h2>
-            <div class="pricing-box">
-                <h3>Clear, scalable pricing aligned to productivity, capability uplift, and risk reduction</h3>
-                <div class="price">$150</div>
-                <div class="price-detail">per person, per workshop</div>
-                <div style="margin: 30px 0; font-size: 1.8rem; font-weight: 600;">or</div>
-                <div class="price">$900</div>
-                <div class="price-detail">per participant for the full programme</div>
+            <h2>Common Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">What if I'm a complete beginner with AI? <span class="faq-toggle">+</span></button>
+                    <div class="faq-answer">
+                        <p>The Explorer tier and the AI Foundations Certification are designed exactly for you. The 101, 102, and 103 workshops build your core literacy from the ground up. No prior experience needed.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What tools or software do I need for learning AI? <span class="faq-toggle">+</span></button>
+                    <div class="faq-answer">
+                        <p>Just a computer and internet access. The Academy is platform-agnostic — you'll work with whichever AI tools suit your work. We'll introduce you to many of them along the way.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How much time does this take each week? <span class="faq-toggle">+</span></button>
+                    <div class="faq-answer">
+                        <p>As much or as little as you want. Most members engage with 1-2 live sessions per week (60-90 minutes each) and dip into community spaces at their own pace.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long is the free trial? <span class="faq-toggle">+</span></button>
+                    <div class="faq-answer">
+                        <p>14 days. You get full access to the Explorer tier — live events, community spaces, AI Games, and the Foundations Certification. No credit card tricks. Cancel anytime.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I cancel anytime? <span class="faq-toggle">+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes. All memberships are monthly with no lock-in contract. Cancel whenever you like.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What's the difference between the standalone Certification ($500) and the Explorer membership ($100/month)? <span class="faq-toggle">+</span></button>
+                    <div class="faq-answer">
+                        <p>The standalone Certification gives you self-paced access to the three foundation workshops. The Explorer membership includes the Certification plus live events, community access, coaching sessions, and all ongoing Academy resources.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is this AI learning community for individuals or teams? <span class="faq-toggle">+</span></button>
+                    <div class="faq-answer">
+                        <p>Both. Many members join individually, and there are plenty of team cohorts. If you're looking to upskill a team, contact Caelan directly to discuss group options.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What if I want to upgrade my AI membership later? <span class="faq-toggle">+</span></button>
+                    <div class="faq-answer">
+                        <p>You can upgrade your membership tier at any time from inside the Academy. Many members start with Explorer and move to Builder within a few months.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="section gray">
-            <h2>Next Steps</h2>
-            <p>Before committing to electives or delivery, we start with a conversation.</p>
-            <p>Most discovery calls take <strong>20 minutes</strong> and focus on:</p>
-            <ul>
-                <li>Your team's current AI maturity</li>
-                <li>Capability gaps and risk areas</li>
-                <li>Which electives will deliver the highest return</li>
-            </ul>
-        </div>
-
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SECTION 12: FINAL CTA                      -->
+        <!-- ═══════════════════════════════════════════ -->
         <div class="cta-section">
-            <h2>Build AI capability deliberately — before being forced to react.</h2>
-            <div style="margin-top: 40px;">
-                <a href="http://join.ai-coaching.academy/discovery" class="cta-button" target="_blank" rel="noopener noreferrer">Schedule a Discovery Call</a>
-                <a href="https://join.ai-coaching.academy/enquiry" class="cta-button secondary" target="_blank" rel="noopener noreferrer">Submit an Enquiry Form</a>
+            <h2>Stop Figuring It Out Alone.</h2>
+            <p>The AI Coaching Academy is where ambitious professionals become confident AI operators — through structured practice, live coaching, and a community that pushes you forward.</p>
+            <p>In twelve months, every professional will be expected to work fluently with AI. The ones who started practicing now will be the ones who lead.</p>
+            <div style="margin-top: 35px;">
+                <a href="https://ai-coaching.academy/plans/1947319/buy?plan_id=2230051" class="cta-button" target="_blank" rel="noopener noreferrer">Start Your 14-Day Free Trial →</a>
+            </div>
+            <div class="secondary-links">
+                <a href="https://ai-coaching.academy/plans/1947320/buy?plan_id=2230054" target="_blank" rel="noopener noreferrer">Subscribe as a Builder →</a>
+                <a href="https://ai-coaching.academy/plans/1947321/buy?plan_id=2230057" target="_blank" rel="noopener noreferrer">Become a Champion →</a>
             </div>
         </div>
 
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- FOOTER                                     -->
+        <!-- ═══════════════════════════════════════════ -->
         <div class="footer">
+            <nav class="footer-nav">
+                <a href="https://join.ai-coaching.academy/">Foundations</a>
+                <a href="https://ai-coaching.academy/" target="_blank" rel="noopener noreferrer">The Academy</a>
+                <a href="https://caelanhuntress.com/" target="_blank" rel="noopener noreferrer">The Professor</a>
+                <a href="https://join.ai-coaching.academy/training/">Live Training</a>
+            </nav>
             <div class="footer-llm-section">
                 <p>Ask an AI to explain the AI Coaching Academy:</p>
                 <div class="llm-links">
@@ -524,45 +1447,69 @@
                     <a href="https://gemini.google.com/app?text=As%20a%20potential%20member%2C%20I%20want%20to%20concretely%20understand%20what%20the%20Ai%20Coaching%20Academy%20will%20add%20to%20my%20life%20and%20my%20work.%0A%0ADetail%20step%20by%20step%20what%20the%20membership%20includes%3A%20what%20I%20can%20do%2C%20what%20I%20will%20learn%2C%20what%20it%20will%20do%20for%20my%20career%2C%20and%20the%20type%20of%20results%20I%20can%20expect.%0A%0AExplain%20it%20simply%2C%20as%20if%20you%20were%20describing%20the%20real%20experience%20of%20the%20community." class="llm-link" target="_blank" rel="noopener">Gemini</a>
                 </div>
             </div>
-            <p>&copy; 2026 AI Foundations Programme. All rights reserved.</p>
+            <p>&copy; 2026 AI Coaching Academy. All rights reserved.</p>
         </div>
     </div>
 
     <script>
+        // Sticky CTA bar — show after scrolling past hero
+        const hero = document.getElementById('hero');
+        const stickyBar = document.getElementById('stickyBar');
+
+        const stickyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    stickyBar.classList.add('visible');
+                } else {
+                    stickyBar.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0 });
+
+        stickyObserver.observe(hero);
+
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
-        // Add entrance animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function () {
+                const item = this.parentElement;
+                const isOpen = item.classList.contains('open');
 
-        const observer = new IntersectionObserver((entries) => {
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+                // Open clicked (if it wasn't already open)
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+
+        // Entrance animation on scroll
+        const animObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        document.querySelectorAll('.outcome-card, .section').forEach(element => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(20px)';
-            element.style.transition = 'all 0.6s ease-out';
-            observer.observe(element);
+        document.querySelectorAll('.step-card, .feature-card, .timeline-item, .testimonial-card, .tier, .section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            animObserver.observe(el);
         });
     </script>
 </body>
