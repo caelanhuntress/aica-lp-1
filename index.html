@@ -346,14 +346,7 @@
         }
 
         .timeline::before {
-            content: '';
-            position: absolute;
-            left: 60px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #004AAD;
-            border-radius: 3px;
+            display: none;
         }
 
         .timeline-item {
@@ -477,11 +470,11 @@
         }
 
         .tier-illustration-img {
-            width: 120px;
-            height: 120px;
+            width: 100%;
+            max-width: 200px;
             margin: 0 auto 15px;
-            border-radius: 50%;
-            object-fit: cover;
+            border-radius: 10px;
+            object-fit: contain;
             display: block;
         }
 
@@ -1029,7 +1022,7 @@
                 <br>
                 <a href="#tiers" class="anchor-link">See Membership Plans ↓</a>
             </div>
-            <p class="anchor-line">Starting from $100 NZD/month · Cancel anytime · Led by Caelan Huntress</p>
+            <p class="anchor-line">Starting from $100 /month · Cancel anytime · Led by Caelan Huntress</p>
         </div>
 
         <!-- ═══════════════════════════════════════════ -->
@@ -1051,7 +1044,7 @@
                 <p>No professional should have to navigate the biggest shift in how work gets done without a community and a guide.</p>
             </div>
 
-            <p>That's what the Academy changes.</p>
+            <p>That's what the Ai Coaching Academy changes.</p>
         </div>
 
         <!-- ═══════════════════════════════════════════ -->
@@ -1062,7 +1055,7 @@
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3>Join the community.</h3>
+                    <h3>Join the membership community.</h3>
                     <p>Choose your membership level and get instant access to the Academy — live events, AI Games, resources, and a network of peers who are just as serious as you are.</p>
                 </div>
                 <div class="step-card">
@@ -1188,12 +1181,11 @@
                 <!-- Explorer -->
                 <div class="tier">
                     <div class="tier-badge">14-Day Free Trial</div>
-                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/mn/aica-mn-plan-1-explorer.png" alt="Explorer" class="tier-illustration-img">
+                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/mn/aica-featured-1-explorers.png" alt="Explorer" class="tier-illustration-img">
                     <h3>Explorer</h3>
                     <p class="tier-best-for">Professionals ready to grow their AI skills</p>
                     <div class="tier-price">$100</div>
-                    <p class="tier-price-period">NZD/month</p>
-                    <p class="tier-annual">$1,000/year (save 17%)</p>
+                    <p class="tier-price-period">/month</p>
                     <ul class="tier-features">
                         <li><span class="check">✓</span> 2 monthly live events with AI experts</li>
                         <li><span class="check">✓</span> Fortnightly tool sprints</li>
@@ -1213,12 +1205,11 @@
                 <!-- Builder -->
                 <div class="tier popular">
                     <div class="tier-badge">⭐ Most Popular</div>
-                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/mn/aica-mn-plan-2-builder.png" alt="Builder" class="tier-illustration-img">
+                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/mn/aica-featured-2-builders.png" alt="Builder" class="tier-illustration-img">
                     <h3>Builder</h3>
                     <p class="tier-best-for">Intermediate-to-advanced users ready to go deeper</p>
                     <div class="tier-price">$250</div>
-                    <p class="tier-price-period">NZD/month</p>
-                    <p class="tier-annual">$2,500/year (save 17%)</p>
+                    <p class="tier-price-period">/month</p>
                     <ul class="tier-features">
                         <li><span class="check">✓</span> 2 monthly live events with AI experts</li>
                         <li><span class="check">✓</span> 2 weekly live events with Caelan</li>
@@ -1237,12 +1228,11 @@
 
                 <!-- Champion -->
                 <div class="tier">
-                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/mn/aica-mn-plan-3-champion.png" alt="Champion" class="tier-illustration-img">
+                    <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/mn/aica-featured-3-champions.png" alt="Champion" class="tier-illustration-img">
                     <h3>Champion</h3>
                     <p class="tier-best-for">Internal AI advocates leading adoption in their organisation</p>
                     <div class="tier-price">$1,000</div>
-                    <p class="tier-price-period">NZD/month</p>
-                    <p class="tier-annual">Contact Caelan for annual pricing</p>
+                    <p class="tier-price-period">/month</p>
                     <ul class="tier-features">
                         <li><span class="check">✓</span> All events</li>
                         <li><span class="check">✓</span> Fortnightly tool sprints</li>
@@ -1260,7 +1250,7 @@
             </div>
 
             <p class="tier-footnote">Cancel anytime. No lock-in contracts.</p>
-            <p class="tier-standalone">Want just the AI Foundations Certification without a membership? Available as a standalone purchase for $500 NZD. <a href="https://ai-coaching.academy/spaces/22359390" target="_blank" rel="noopener noreferrer">Learn more →</a></p>
+            <p class="tier-standalone">Want just the AI Foundations Certification without a membership? Available as a standalone purchase for $500. <a href="https://ai-coaching.academy/spaces/22359390" target="_blank" rel="noopener noreferrer">Learn more →</a></p>
         </div>
 
         <!-- ═══════════════════════════════════════════ -->
@@ -1315,14 +1305,20 @@
                 <div>
                     <p>Caelan Huntress is an AI Trainer based in Christchurch, New Zealand. He's trained hundreds of professionals across multiple organisations and designed the AI Foundations Certification from the ground up.</p>
                     <p>His approach is built on a simple belief: you learn AI by using it, not by watching someone else use it. That's why every workshop in the Academy is built around AI Games — practical, structured exercises that build real capability through deliberate practice.</p>
-                    <p>Inside the Academy, Caelan runs weekly AI Coaching Power Hours, monthly AiAmA sessions, and personally mentors Champion members on their projects.</p>
-                    <div class="guide-quote">
-                        "I've watched too many smart people stay on the sidelines because nobody gave them a structured way to practice, or a place to play. That's what this Academy is."
-                    </div>
-                    <p><a href="https://caelanhuntress.com" class="guide-link" target="_blank" rel="noopener noreferrer">Learn more about Caelan →</a></p>
                 </div>
                 <div>
                     <img src="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/images/caelan/stage-1.jpg" alt="Caelan Huntress speaking" class="guide-photo">
+                </div>
+            </div>
+            <div class="guide-layout" style="margin-top: 0;">
+                <div>
+                    <p>Inside the Academy, Caelan runs weekly AI Coaching Power Hours, monthly AiAmA sessions, and personally mentors Champion members on their projects.</p>
+                    <p><a href="https://caelanhuntress.com" class="guide-link" target="_blank" rel="noopener noreferrer">Learn more about Caelan →</a></p>
+                </div>
+                <div>
+                    <div class="guide-quote">
+                        "I've watched too many smart people stay on the sidelines because nobody gave them a structured way to practice, or a place to play. That's what this Academy is."
+                    </div>
                 </div>
             </div>
         </div>
@@ -1431,12 +1427,6 @@
         <!-- FOOTER                                     -->
         <!-- ═══════════════════════════════════════════ -->
         <div class="footer">
-            <nav class="footer-nav">
-                <a href="https://join.ai-coaching.academy/">Foundations</a>
-                <a href="https://ai-coaching.academy/" target="_blank" rel="noopener noreferrer">The Academy</a>
-                <a href="https://caelanhuntress.com/" target="_blank" rel="noopener noreferrer">The Professor</a>
-                <a href="https://join.ai-coaching.academy/training/">Live Training</a>
-            </nav>
             <div class="footer-llm-section">
                 <p>Ask an AI to explain the AI Coaching Academy:</p>
                 <div class="llm-links">
